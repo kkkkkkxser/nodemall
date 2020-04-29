@@ -1,0 +1,143 @@
+<template>
+  <div>
+    <!-- 头部 -->
+    <div class="head">
+      <!-- 头部的上部分 -->
+      <div class="header">
+        <!-- 头部logo -->
+        <div class="header-image"></div>
+        <!-- 头部登录购物车 -->
+        <div class="header-right">
+          <a href="javascript:avoid(0)">你好，请登录</a>
+          <a href="javascript:avoid(0)">
+            <img src="./../assets/cart.png" class="car" />
+          </a>
+          <a href="javascript:avoid(0)" @click="toCart">购物车</a>
+        </div>
+      </div>
+      <!-- 头部导航 -->
+      <div class="nav">
+          <!-- 导航 -->
+        <ul>
+          <li>
+            <a href="javascript:avoid(0)" @click="toLogin()">商城首页</a>
+          </li>
+          <li>
+            <a href="javascript:avoid(0)" @click="toHand()">雕塑手办</a>
+          </li>
+          <li>
+            <a href="javascript:avoid(0)" @click="toDoll()">毛绒玩偶</a>
+          </li>
+          <li>
+            <a href="javascript:avoid(0)" @click="toClothes()">男女服饰</a>
+          </li>
+          <li>
+            <a href="javascript:avoid(0)" @click="toOthes()">其他</a>
+          </li>
+        </ul>
+        <!-- 搜索 -->
+        <div class="search">
+          <el-input placeholder="请输入内容" class="input">
+            <el-button slot="append" icon="el-icon-search"></el-button>
+          </el-input>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+// 清除浏览器自带样式
+import "./../css/clear.css";
+export default {
+  data() {
+    return {};
+  },
+  methods:{
+    toLogin(){
+      this.$router.push('/index')
+    },
+    toHand(){
+      this.$router.push('/hand')
+    },
+    toDoll(){
+      this.$router.push('/doll')
+    }, toClothes(){
+      this.$router.push('/clothes')
+    },
+     toOthes(){
+      this.$router.push('/others')
+    },
+    toCart(){
+      this.$router.push('/cart')
+    }
+  }
+};
+</script>
+<style scoped>
+/* 头部样式 */
+.head {
+  height: 120px;
+  position: relative;
+  width: 100%;
+}
+/* 头部的上部分样式 */
+.header {
+  height: 75px;
+  background-color: #090909;
+}
+/* 头部logo样式 */
+.header-image {
+  display: block;
+  width: 297px;
+  height: 39px;
+  z-index: 99;
+  background: url(./../assets/spirit.jpg);
+  background-position: -2px -147px;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+/* 头部登录购物车 */
+.header-right {
+  position: absolute;
+  right: 250px;
+  top: 28px;
+}
+.header-right a {
+  color: white;
+}
+.car {
+  margin-left: 30px;
+  height: 25px;
+  width: 25px;
+}
+/* 头部导航样式 */
+.nav {
+  height: 45px;
+  width: 100%;
+  background-color: #202020;
+  position: relative;
+}
+/* 导航 */
+.nav ul {
+  display: flex;
+}
+.nav ul li {
+  padding-left: 50px;
+  padding-top: 13px;
+}
+.nav ul a {
+  color: white;
+  font-size: 18px;
+}
+.nav ul a:hover {
+  color: #fa4f17;
+}
+/* 搜索 */
+.search{
+    width:300px;
+    position: absolute;
+    right:30px;
+    top:1px;
+}
+</style>
