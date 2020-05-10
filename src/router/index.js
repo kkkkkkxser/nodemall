@@ -7,22 +7,22 @@ import Detail from  './../views/Detail.vue'
 import Cart from './../views/Cart.vue'
 import Address from './../views/Address.vue'
 import Pay from './../views/Pay.vue'
-import Product from './../views/Product.vue'
 import Home from './../views/Home.vue'
 import Hand from './../views/Hand.vue'
 import Doll from './../views/Doll.vue'
 import Clothes from './../views/Clothes.vue'
 import Others from './../views/Others.vue'
+// 后台
+import BackLogin from './../views/BackLogin.vue'
+import Back from './../views/Back.vue'
+import BackIndex from './../views/BackIndex.vue'
+import BackUser from './../views/BackUser.vue'
+import BackGoods from './../views/BackGoods.vue'
  
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      // 路由注册
-      path: '/',
-      component: Login
-    },
     {
       path:'/home',
       component:Home,
@@ -33,12 +33,8 @@ export default new Router({
           component:Index
         },
         {
-          path:'/detail',
+          path:'/detail/:productId',
           component:Detail
-        },
-        {
-        path:'/prodcut',
-        component:Product
         },
         {
           path:'/address',
@@ -68,6 +64,34 @@ export default new Router({
                 path:'/others',
                 component:Others
               }
+      ]
+    },
+    {
+      // 路由注册
+      path: '/login',
+      component: Login
+    },
+    {
+      path:'/backlogin',
+      component:BackLogin
+    },
+    {
+      path:'/back',
+      component:Back,
+      redirect:'/backindex',
+      children:[
+        {
+          path:'/backindex',
+          component:BackIndex
+        },
+        {
+          path:'/backuser',
+          component:BackUser
+        },
+        {
+          path:'/backgoods',
+          component:BackGoods
+        }
       ]
     }
   ]

@@ -8,11 +8,18 @@
         <div class="header-image"></div>
         <!-- 头部登录购物车 -->
         <div class="header-right">
-          <a href="javascript:avoid(0)">你好，请登录</a>
+          <span v-if="usname">{{usname}}</span>
+          <a href="javascript:avoid(0)" @click="toLogin" v-if="!usname">你好，请登录</a>
+          <a href="javascript:avoid(0)" @click="logout" style="padding-left:12px;">退出</a>
           <a href="javascript:avoid(0)">
             <img src="./../assets/cart.png" class="car" />
           </a>
-          <a href="javascript:avoid(0)" @click="toCart">购物车</a>
+          <a href="javascript:avoid(0)" @click="toCart">我的购物车</a>
+          <a href="javascript:avoid(0)">
+            <img src="./../assets/list.png" class="car" />
+          </a>
+          <a href="javascript:avoid(0)" @click="toCart">我的订单</a>
+          
         </div>
       </div>
       <!-- 头部导航 -->
@@ -20,7 +27,7 @@
           <!-- 导航 -->
         <ul>
           <li>
-            <a href="javascript:avoid(0)" @click="toLogin()">商城首页</a>
+            <a href="javascript:avoid(0)" @click="toIndex()">商城首页</a>
           </li>
           <li>
             <a href="javascript:avoid(0)" @click="toHand()">雕塑手办</a>
@@ -37,8 +44,8 @@
         </ul>
         <!-- 搜索 -->
         <div class="search">
-          <el-input placeholder="请输入内容" class="input">
-            <el-button slot="append" icon="el-icon-search"></el-button>
+          <el-input placeholder="请输入内容" class="input" v-model="search" clearable>
+            <el-button slot="append" icon="el-icon-search" @click="$bus.$emit('info',search);"></el-button>
           </el-input>
         </div>
       </div>
@@ -48,12 +55,22 @@
 <script>
 // 清除浏览器自带样式
 import "./../css/clear.css";
+import axios from 'axios'
 export default {
   data() {
-    return {};
+    return {
+      usname:"",
+      search:""
+    };
+  },
+  created(){
+    this.getusername();
   },
   methods:{
     toLogin(){
+      this.$router.push('/login')
+    },
+    toIndex(){
       this.$router.push('/index')
     },
     toHand(){
@@ -69,6 +86,23 @@ export default {
     },
     toCart(){
       this.$router.push('/cart')
+    },
+    logout(){
+      axios.post('/users/logout').then((response)=>{
+          let res = response.data;
+          if(res.status=="0"){
+            this.$message.success("退出成功")
+            this.usname='';
+          }
+      })
+    },
+    getusername(){
+      axios.get('/users/username').then((response)=>{
+        let res = response.data;
+        if(res.status=="0"){
+          this.usname=res.result;
+        }
+      })
     }
   }
 };
@@ -102,6 +136,9 @@ export default {
   position: absolute;
   right: 250px;
   top: 28px;
+}
+.header-right span{
+  color:white;
 }
 .header-right a {
   color: white;

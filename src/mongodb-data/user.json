@@ -1,0 +1,902 @@
+{
+  "userId" : "0000001",
+  "userName" : "admin",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000002",
+  "userName" : "user1",
+  "userPwd" : "123456s",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000003",
+  "userName" : "user2",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000004",
+  "userName" : "user5",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000005",
+  "userName" : "user11",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000006",
+  "userName" : "lisss",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000007",
+  "userName" : "macccc",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000008",
+  "userName" : "axs",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000009",
+  "userName" : "hoverr",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+{
+  "userId" : "0000010",
+  "userName" : "kcac",
+  "userPwd" : "123456",
+  "orderList" : [{
+      "orderId" : "6224201705302250301",
+      "orderTotal" : 3359,
+      "addressInfo" : {
+        "addressId" : "100001",
+        "userName" : "测试用户",
+        "streetName" : "广东省佛山市",
+        "postCode" : "100001",
+        "tel" : "13825994536",
+        "isDefault" : true
+      },
+      "goodsList" : [
+        {
+          "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
+          "productType" : "clothes",
+          "productId" : "019",
+          "productName" : "菲兹连体衣",
+          "salePrice" : 480,
+          "productImage" : "clothes3.jpg",
+          "productNum" : "1",
+          "checked" : true
+        }
+      ],
+      "orderStatus" : "1",
+      "createDate" : "2017-05-30 22:50:30"
+    }],
+  "cartList" : [{
+    "_id" : ObjectId("5eaa4985145f8c43c435ec68"),
+    "productType" : "clothes",
+    "productId" : "023",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "clothes7.jpg",
+    "productNum" : "4",
+    "checked" : false
+  }, {
+    "_id" : ObjectId("5eaa4985145f8c43c435ec60"),
+    "productType" : "doll",
+    "productId" : "015",
+    "productName" : "黑人夫妇",
+    "salePrice" : 700,
+    "productImage" : "doll6.jpg",
+    "productNum" : "9",
+    "checked" : true
+  }, {
+    "_id" : ObjectId("5eaa4986145f8c43c435ec71"),
+    "productType" : "others",
+    "productId" : "032",
+    "productName" : "黑人夫妇",
+    "salePrice" : 389,
+    "productImage" : "others8.jpg",
+    "productNum" : "1",
+    "checked" : true
+  }
+],
+  "addressList" : [{
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省佛山市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省东莞市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省湛江市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }, {
+      "addressId" : "100001",
+      "userName" : "测试用户",
+      "streetName" : "广东省清远市",
+      "postCode" : "100001",
+      "tel" : "13825994536",
+      "isDefault" : true
+    }],
+  "__v" : 34
+}
+
+

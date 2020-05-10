@@ -14,35 +14,39 @@
         <div class="login">
           <!-- 提示区 -->
           <div class="top">
-            <span>普通用户登录</span>
+            <a style="color:black">普通用户登录</a>
             <el-divider direction="vertical"></el-divider>
-            <span>管理员登录</span>
+            <a href="javascript:avoid(0)" @click="toBackLogin" >管理员登录</a>
           </div>
           <!-- 账号密码输入区 -->
           <div class="msg">
             <el-form :model="loginForm" :rules="loginRules" ref="loginFormRef">
-              <el-form-item prop="username" class="loginForm">
+              <el-form-item prop="userName" class="loginForm">
                 <el-input
-                  v-model="loginForm.username"
+                  v-model="loginForm.userName"
                   prefix-icon="el-icon-user-solid"
                   placeholder="请输入用户名"
                 ></el-input>
               </el-form-item>
-              <el-form-item prop="password" class="loginForm">
+              <el-form-item prop="userPwd" class="loginForm">
                 <el-input
-                  v-model="loginForm.password"
-                  prefix-icon="el-icon-star-on"
-                  placeholder="请输入用户名"
+                  v-model="loginForm.userPwd"
+                  prefix-icon="el-icon-lock"
+                  placeholder="请输入密码"
                   type="password"
+                  show-password
+                   @keyup.native.enter="submitForm"
                 ></el-input>
               </el-form-item>
             </el-form>
           </div>
           <div class="login-btn">
             <!-- 按钮区域 -->
-            <el-button type="primary" @click="submitForm" class="button1">提交</el-button>
+            <el-button type="primary" @click="submitForm" class="button1">登录</el-button>
+            <br>
+            <br>
             <!-- 账号注册 -->
-            <a href="javascript:void(0);" @click="regist">立即注册</a>
+            <a href="javascript:void(0);" @click="regist">没有账号，立即注册</a>
           </div>
         </div>
       </el-main>
@@ -53,38 +57,40 @@
     </el-container>
     <!-- 注册弹出框 -->
     <el-dialog title="账号注册" :visible.sync="dialogFormVisible">
-      <el-form :model="regist">
-        <el-form-item label="账号" :label-width="formLabelWidth">
-          <el-input v-model="regist.username" autocomplete="off"></el-input>
+      <el-form :model="regist1">
+        <el-form-item label="账号" :label-width="formLabelWidth" class="regist-form">
+          <el-input v-model="regist1.userName" autocomplete="off" placeholder="请输入3-10位的账号"></el-input>
         </el-form-item>
-       <el-form-item label="密码" :label-width="formLabelWidth">
-          <el-input v-model="regist.password" autocomplete="off"></el-input>
+       <el-form-item label="密码" :label-width="formLabelWidth" class="regist-form">
+          <el-input v-model="regist1.userPwd" autocomplete="off" placeholder="请输入6-30位的密码"></el-input>
         </el-form-item>
       </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
-        <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+      <div slot="footer">
+        <el-button @click="dialogFormVisible = false" class="f-buts">取 消</el-button>
+        <el-button type="primary" @click="toRegist" class="f-buts">确 定</el-button>
       </div>
     </el-dialog>
   </div>
 </template>
 <script>
+import axios from "axios";
 import NavFooter from './../components/NavFooter'
+import '../css/clear.css'
 export default {
   data() {
     return {
       //  登录账号密码伪数据
       loginForm: {
-        username: "",
-        password: ""
+        userName: "",
+        userPwd: ""
       },
       //  登录账号密码表单验证
       loginRules: {
-        username: [
+        userName: [
           { required: true, message: "请输入登录名称", trigger: "blur" },
           { min: 3, max: 10, message: "长度在 3 到 10 个字符", trigger: "blur" }
         ],
-        password: [
+        userPwd: [
           { required: true, message: "请输入登录密码", trigger: "blur" },
           { min: 6, max: 30, message: "长度在 6 到 30 个字符", trigger: "blur" }
         ]
@@ -92,29 +98,48 @@ export default {
       // 注册弹出框数据
         dialogFormVisible: false,
         formLabelWidth: '120px',
-        reigst:{
-          name:'',
-          password:''
-        }
+        regist1:{
+          userName:'',
+          userPwd:''
+        },
     };
   },
   methods: {
     // 登录
     submitForm() {
       //  假判断，自定义
-      if (
-        this.$refs.loginFormRef.model.username === "user" &&
-        this.$refs.loginFormRef.model.password === "123456"
-      ) {
-        this.$router.push("/home");
-        this.$message.success("登录成功！");
-      } else {
-        return this.$message.error("密码错误!");
-      }
+      // if (
+      //   this.$refs.loginFormRef.model.userName === "user" &&
+      //   this.$refs.loginFormRef.model.userPwd === "123456"
+      // ) {
+      //   this.$router.push("/home");
+      //   this.$message.success("登录成功！");
+      // } else {
+      //   return this.$message.error("密码错误!");
+      // }
+      axios.post("/users/login",{
+        userName:this.loginForm.userName,
+        userPwd:this.loginForm.userPwd
+      }).then((response)=>{
+        let res= response.data;
+        if(res.status=="0"){
+          this.$router.push("/home")
+          this.$message.success("登录成功！")
+        }else{
+          this.$message.error("密码错误！")
+        }
+      })
     },
     // 注册
     regist(){
       this.dialogFormVisible = true
+    },
+    toBackLogin(){
+      this.$router.push('/backlogin')
+    },
+    toRegist(){
+    this.dialogFormVisible = false
+    this.$message.success("注册成功")
     }
   },
   components:{
@@ -160,12 +185,15 @@ export default {
   float: right;
   transform: translate(-150px, 20px);
   font-size: 23px;
-  color: orange;
+  color: grey;
 }
 /* 提示区 */
 .top {
   padding-left: 40px;
   padding-top: 50px;
+}
+.top a{
+  color:grey;
 }
 /* 输入区域 */
 .msg {
@@ -180,12 +208,19 @@ export default {
 /* 登录按钮 */
 .button1 {
   width: 350px;
-  background-color: orange;
+  background-color: grey;
   height: 50px;
+  font-size:25px;
+  letter-spacing: 100px;
+  padding-left:90px;
 }
 /* 按钮区 */
 .login-btn {
   margin-left: 20px;
+  font-size:15px;
+}
+.login-btn a{
+  color:grey;
 }
 /* 维权信息系列 */
 .sp{
@@ -194,5 +229,13 @@ export default {
   width: 42px;
     height: 52px;
   
+}
+.regist-form{
+  width:450px;
+  margin-top:20px;
+}
+.f-buts{
+  width:70px;
+  height:40px;
 }
 </style>
