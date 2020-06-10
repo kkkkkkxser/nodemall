@@ -1,5 +1,6 @@
 <template>
   <div>
+     <el-backtop></el-backtop>
     <!-- 面包屑导航栏 -->
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/' }">商城首页</el-breadcrumb-item>
@@ -23,8 +24,11 @@
       <div class="price-select">
         <a>价格</a>
         <ul>
+           <li>
+            <a href="javascript:void(0)" @click="gettmpGoodsList">全部</a>
+          </li>
           <li v-for="price in priceFilter" :key="price.id">
-                <a href="javascript:void(0)">{{price.startPrice}}-{{price.endPrice}}</a>
+                <a href="javascript:void(0)" @click="priceselect(price.startPrice,price.endPrice)">{{price.startPrice}}-{{price.endPrice}}</a>
                 </li>
                </ul>
       </div>
@@ -63,6 +67,7 @@ export default {
     return {
       // 商品列表
       goodsList: [],
+      tmpGoodsList:[],
       // 排序顺序
       sortFlag: true,
       // 分页
@@ -73,22 +78,22 @@ export default {
       detId:'',
       search:'',
       tempor:[],
-        priceFilter: [
+         priceFilter: [
         {
           startPrice: 0.0,
-          endPrice: 100.0
+          endPrice: 150.0
         },
         {
-          startPrice: 100.0,
-          endPrice: 500.0
+          startPrice: 150.0,
+          endPrice: 200.0
         },
         {
-          startPrice: 500.0,
+          startPrice: 200.0,
+          endPrice: 250.0
+        },
+        {
+          startPrice: 250.0,
           endPrice: 1000.0
-        },
-        {
-          startPrice: 1000.0,
-          endPrice: 2000.0
         }
       ]
     };
@@ -102,6 +107,9 @@ export default {
       this.$bus.$on('info',data =>{
       this.search=data;
       this.goodsList=this.newList;
+      if(this.goodsList==''){
+        this.$message.error("没有该商品")
+      }
     })
     },
     computed:{
@@ -138,6 +146,7 @@ export default {
         if (res.status == "0") {
           if (flag) {
             this.goodsList = this.goodsList.concat(res.result.list);
+            this.tmpGoodsList=this.goodsList;
             if (res.result.count == 0) {
               this.busy = true;
             } else {
@@ -145,6 +154,7 @@ export default {
             }
           } else {
             this.goodsList = res.result.list;
+            this.tmpGoodsList=this.goodsList;
             this.busy = false;
           }
         } else {
@@ -166,20 +176,42 @@ export default {
       this.getGoodList(true);
       }, 500)},
     
+    // 添加购物车
     addCart(productId){
-      axios.post("/goods/addCart",{
+      axios.post("/users/addCart",{
         productId:productId
       }).then((response)=>{
         console.log(response);
         if(response.data.status == "0"){
           this.$message.success("添加成功")
       }else{
-        this.$message.error("添加失败")
+        this.$message.error(response.data.msg)
       }
       })
     },
+    // 商品详情
     detail(productId){
       this.$router.push('/detail/'+productId)
+    },
+    // 价格区间
+    priceselect(startPrice,endPrice){
+      var param={
+        startPrice:startPrice,
+        endPrice:endPrice
+      };
+      console.log(startPrice);
+      console.log(endPrice);
+       axios.get("/goods/handselect", { params: param }).then(response => {
+        let res = response.data;
+        this.goodsList=res.result.list;
+        if(this.goodsList==''){
+          this.$message.error("该价格区间没有商品")
+        }
+      });
+    },
+    // 返回全部列表
+    gettmpGoodsList(){
+      this.goodsList=this.tmpGoodsList;
     }
   }
 
@@ -227,7 +259,7 @@ export default {
 /* 价格区间选择 */
 .price-select {
   width: 200px;
-  height: 300px;
+  height: 360px;
   background-color: white;
   position: absolute;
   left: 85px;

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-backtop></el-backtop>
     <!-- 面包屑导航栏 -->
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/' }">商城首页</el-breadcrumb-item>
@@ -116,9 +117,12 @@ export default {
       checked:false
     };
   },
+  created(){
+     this.getCartList();
+  },
   mounted() {
     // 获取商品数据
-    this.getCartList();
+    // this.getCartList();
   },
   //未完成的全选自动判断
   // watch:{
@@ -157,6 +161,8 @@ export default {
     getCartList() {
       // console.log("链接")
       axios.get("/users/cart").then(response => {
+        let res = response.data;
+        if(res.status=="0"){
         // console.log("里面")
         let res = response.data;
         this.cartList = res.result;
@@ -167,6 +173,9 @@ export default {
         // }else{
         //   this.checked=false
         // }
+        }else{
+             this.$message.error(res.msg)
+        }
       });
     },
     // 获取数量的变化

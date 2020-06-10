@@ -71,14 +71,14 @@ export default {
         })
         },
           addCart(productId){
-      axios.post("/goods/addCart",{
+      axios.post("/users/addCart",{
         productId:productId
       }).then((response)=>{
         console.log(response);
         if(response.data.status == "0"){
           this.$message.success("添加成功")
       }else{
-        this.$message.error("添加失败")
+         this.$message.error(response.data.msg)
       }
       })
     }

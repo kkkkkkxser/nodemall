@@ -12,6 +12,7 @@ import Hand from './../views/Hand.vue'
 import Doll from './../views/Doll.vue'
 import Clothes from './../views/Clothes.vue'
 import Others from './../views/Others.vue'
+import Order from './../views/Order.vue'
 // 后台
 import BackLogin from './../views/BackLogin.vue'
 import Back from './../views/Back.vue'
@@ -23,6 +24,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/',
+      redirect:'/index',
+      component:Index
+    },
     {
       path:'/home',
       component:Home,
@@ -47,6 +53,10 @@ export default new Router({
             {
               path:'/cart',
               component:Cart
+              },
+              {
+                path:'/order',
+                component:Order
               },
               {
                 path:'/hand',

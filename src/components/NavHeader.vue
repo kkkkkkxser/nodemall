@@ -18,7 +18,7 @@
           <a href="javascript:avoid(0)">
             <img src="./../assets/list.png" class="car" />
           </a>
-          <a href="javascript:avoid(0)" @click="toCart">我的订单</a>
+          <a href="javascript:avoid(0)" @click="toOrder">我的订单</a>
           
         </div>
       </div>
@@ -45,7 +45,7 @@
         <!-- 搜索 -->
         <div class="search">
           <el-input placeholder="请输入内容" class="input" v-model="search" clearable>
-            <el-button slot="append" icon="el-icon-search" @click="$bus.$emit('info',search);"></el-button>
+            <el-button slot="append" icon="el-icon-search" @click="clicks"></el-button>
           </el-input>
         </div>
       </div>
@@ -67,6 +67,11 @@ export default {
     this.getusername();
   },
   methods:{
+    // 搜索
+    clicks(){
+      this.$bus.$emit('info',this.search);
+      this.search=""
+    },
     toLogin(){
       this.$router.push('/login')
     },
@@ -87,11 +92,18 @@ export default {
     toCart(){
       this.$router.push('/cart')
     },
+    toOrder(){
+      this.$router.push('/order')
+    },
     logout(){
       axios.post('/users/logout').then((response)=>{
           let res = response.data;
           if(res.status=="0"){
-            this.$message.success("退出成功")
+             this.$message({
+            duration:1000,
+            message:"退出成功",
+            type:'success'
+          })
             this.usname='';
           }
       })

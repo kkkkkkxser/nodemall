@@ -67,7 +67,7 @@
       </el-form>
       <div slot="footer">
         <el-button @click="dialogFormVisible = false" class="f-buts">取 消</el-button>
-        <el-button type="primary" @click="toRegist" class="f-buts">确 定</el-button>
+        <el-button type="primary" @click="toRegist" class="f-buts">注 册</el-button>
       </div>
     </el-dialog>
   </div>
@@ -124,9 +124,14 @@ export default {
         let res= response.data;
         if(res.status=="0"){
           this.$router.push("/home")
-          this.$message.success("登录成功！")
+          this.$message({
+            duration:1000,
+            message:"登录成功",
+            type:'success'
+          })
         }else{
-          this.$message.error("密码错误！")
+          // alert(res.result.err)
+          this.$message.error("密码错误")
         }
       })
     },
@@ -138,8 +143,18 @@ export default {
       this.$router.push('/backlogin')
     },
     toRegist(){
-    this.dialogFormVisible = false
-    this.$message.success("注册成功")
+    this.dialogFormVisible = false;
+    axios.post("/users/regist",{
+      userName:this.regist1.userName,
+      userPwd:this.regist1.userPwd
+    }).then((response)=>{
+      let res=response.data;
+      if(res.status=="0"){
+        this.$message.success("注册成功")
+      }else{
+        this.$message.error("注册失败!")
+      }
+    })
     }
   },
   components:{

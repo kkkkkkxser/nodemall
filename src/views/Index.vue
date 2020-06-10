@@ -1,5 +1,6 @@
 <template>
     <div>
+        <el-backtop></el-backtop>
         <div class="slider">
               <!-- 轮播图 -->
       <el-carousel :interval="4000" height="600px">

@@ -20,8 +20,6 @@ import infiniteScroll from 'vue-infinite-scroll'
 import bus from './bus'
 Vue.use(bus);
 
-
-
 // Vue.use(Vuex)
 Vue.config.productionTip = false
 // 使用element-ui

@@ -32,7 +32,7 @@ app.use(function(req,res,next){
   if(req.cookies.userId){
     next();
   }else{
-    if(req.originalUrl=='/users/login'||req.originalUrl=='/users/logout'||req.originalUrl.indexOf("/goods")>-1){
+    if(req.originalUrl=='/users/login'||req.originalUrl=='/users/logout'||req.originalUrl.indexOf("/goods")>-1||req.originalUrl=='/users/regist'){
       next();
     }else{
       // this.$message.error("请先登录");

@@ -40,6 +40,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     publicPath: config.dev.assetsPublicPath,
     proxy: config.dev.proxyTable,
     quiet: true, // necessary for FriendlyErrorsPlugin
+    disableHostCheck:true,
+    // 关闭路由检测
     watchOptions: {
       poll: config.dev.poll,
     }

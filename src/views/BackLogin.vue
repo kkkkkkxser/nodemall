@@ -31,7 +31,7 @@ export default {
     return {
       //  登录账号密码伪数据
       loginForm: {
-        username: 'user',
+        username: 'admin',
         password: '123456'
       },
       //  登录账号密码表单验证
@@ -54,9 +54,10 @@ export default {
         if (!valid) return
         //  假判断，自定义
         if (
-          this.$refs.loginFormRef.model.username === 'user' &&
+          this.$refs.loginFormRef.model.username === 'admin' &&
           this.$refs.loginFormRef.model.password === '123456'
         ) {
+          this.$message.success("登录成功!")
           this.$router.push('/back')
         } else {
           return this.$message.error('密码错误!')

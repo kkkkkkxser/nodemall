@@ -5,14 +5,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+      "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -90,19 +90,19 @@
 }
 {
   "userId" : "0000002",
-  "userName" : "user1",
-  "userPwd" : "123456s",
+  "userName" : "user",
+  "userPwd" : "123456",
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -185,14 +185,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -275,14 +275,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -365,14 +365,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -455,14 +455,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -545,14 +545,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -635,14 +635,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -725,14 +725,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
@@ -815,14 +815,14 @@
   "orderList" : [{
       "orderId" : "6224201705302250301",
       "orderTotal" : 3359,
-      "addressInfo" : {
+    "addressInfo" : [{
         "addressId" : "100001",
         "userName" : "测试用户",
         "streetName" : "广东省佛山市",
         "postCode" : "100001",
         "tel" : "13825994536",
         "isDefault" : true
-      },
+        }],
       "goodsList" : [
         {
           "_id" : ObjectId("5eb2aea0145f8c1884a0c875"),
